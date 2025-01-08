@@ -5,11 +5,11 @@ Mainly for personal use.
 
 
 
-# Built using Next.js + Supabase for CRUD operations.
+### Built using Next.js + Supabase for CRUD operations.
 
-# Deployed on Vercel. 
+### Deployed on Vercel. 
 
-## If you would like to use this create a Supabase table and run this SQL command:
+### If you would like to use this create a Supabase table and run this SQL command:
 
 create table jobs (
   id uuid default uuid_generate_v4() primary key,
@@ -23,12 +23,12 @@ create table jobs (
   location text
 );
 
-# Add your Supabase environmental variables to a .env.local at your project root.
+### Add your Supabase environmental variables to a .env.local at your project root.
 
-# Deploying on Vercel:
-# Build command: npm run dev
-# Output directory: .next
-# Install command: npm install
+#### Deploying on Vercel:
+#### Build command: npm run dev
+#### Output directory: .next
+#### Install command: npm install
 
 Add your supabase env-variables to Vercel-project.
 NEXT_PUBLIC_SUPABASE_URL=yourkey
