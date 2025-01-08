@@ -7,9 +7,27 @@ interface HomeProps {
 }
 
 export function Home({ jobs }: HomeProps) {
-  const sortedJobs = [...jobs].sort((a, b) =>
-    new Date(a.due_date).getTime() - new Date(b.due_date).getTime()
-  )
+  const sortedJobs = [...jobs].sort((a, b) => {
+    // Parse dates in YYYY-MM-DD format
+    const [yearA, monthA, dayA] = a.due_date.split('-').map(Number);
+    const [yearB, monthB, dayB] = b.due_date.split('-').map(Number);
+
+    // Create Date objects with consistent time (midnight UTC)
+    const dateA = new Date(Date.UTC(yearA, monthA - 1, dayA));
+    const dateB = new Date(Date.UTC(yearB, monthB - 1, dayB));
+
+    // Handle invalid dates
+    if (!isValid(dateA)) return 1;
+    if (!isValid(dateB)) return -1;
+
+    // Compare timestamps
+    return dateA.getTime() - dateB.getTime();
+  });
+
+  // Helper function to check if date is valid
+  function isValid(date: Date) {
+    return date instanceof Date && !isNaN(date.getTime());
+  }
 
   return (
     <div className="w-full">
@@ -50,6 +68,6 @@ export function Home({ jobs }: HomeProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
