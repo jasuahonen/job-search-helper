@@ -72,38 +72,36 @@ export default function JobSearchHelper() {
   }
 
   return (
-    <div className="dark min-h-screen bg-gray-900 text-gray-100">
-      <div className="container mx-auto px-4 py-8 flex flex-col items-center">
-        <h1 className="text-3xl lg:text-4xl font-bold mb-8 text-center">Job Search Helper</h1>
-        <div className="flex justify-center space-x-4 mb-8">
-          <Button onClick={() => setCurrentPage("home")} variant={currentPage === "home" ? "default" : "outline"}>
-            Home
-          </Button>
-          <Button onClick={() => setCurrentPage("add")} variant={currentPage === "add" ? "default" : "outline"}>
-            Add Job
-          </Button>
-        </div>
-        <div className="w-full max-w-7xl">
-          {currentPage === "home" ? (
-            <Home jobs={jobs} />
-          ) : (
-            <div className="flex flex-col items-center">
-              <div className="w-full max-w-2xl">
-                <JobForm onAddJob={addJob} setCurrentPage={setCurrentPage} />
-              </div>
-              <div className="w-full mt-8 space-y-4">
-                {jobs.map((job) => (
-                  <JobItem
-                    key={job.id}
-                    job={job}
-                    onUpdateJob={updateJob}
-                    onDeleteJob={deleteJob}
-                  />
-                ))}
-              </div>
+    <div className="flex flex-col items-center">
+      <h1 className="text-3xl lg:text-4xl font-bold mb-8 text-center">Job Search Helper</h1>
+      <div className="flex justify-center space-x-4 mb-8">
+        <Button onClick={() => setCurrentPage("home")} variant={currentPage === "home" ? "default" : "outline"}>
+          Home
+        </Button>
+        <Button onClick={() => setCurrentPage("add")} variant={currentPage === "add" ? "default" : "outline"}>
+          Add Job
+        </Button>
+      </div>
+      <div className="w-full max-w-7xl">
+        {currentPage === "home" ? (
+          <Home jobs={jobs} />
+        ) : (
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-2xl">
+              <JobForm onAddJob={addJob} setCurrentPage={setCurrentPage} />
             </div>
-          )}
-        </div>
+            <div className="w-full mt-8 space-y-4">
+              {jobs.map((job) => (
+                <JobItem
+                  key={job.id}
+                  job={job}
+                  onUpdateJob={updateJob}
+                  onDeleteJob={deleteJob}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
