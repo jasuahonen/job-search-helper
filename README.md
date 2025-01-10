@@ -1,7 +1,7 @@
 ## This is a job-search-helper that is deployed in a private domain.
 Main function is to store jobs, manage their states (Applied | Not applied) and make notes about the tech-stacks or important info about the position. 
 Adding and deleting job-postings is easy and you can find them all in the same place. Filtering done by "Due date".
-Mainly for personal use.
+Mainly for personal use and the main thing is to remove the excess use of Notes-app and clarify job searching. Also you can save the description of the job to help you prepare for an interview after the job listing is deleted from recruitment websites.
 
 
 <img width="441" alt="Screenshot 2025-01-09 at 0 24 15" src="https://github.com/user-attachments/assets/11413028-5bfb-4178-b6af-d3bfcbafa7b2" />
