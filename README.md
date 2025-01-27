@@ -4,7 +4,8 @@ Adding and deleting job-postings is easy and you can find them all in the same p
 Mainly for personal use and the main thing is to remove the excess use of Notes-app and clarify job searching. Also you can save the description of the job to help you prepare for an interview after the job listing is deleted from recruitment websites.
 
 
-<img width="441" alt="Screenshot 2025-01-09 at 0 24 15" src="https://github.com/user-attachments/assets/11413028-5bfb-4178-b6af-d3bfcbafa7b2" />
+<img width="551" alt="Screenshot 2025-01-28 at 0 54 55" src="https://github.com/user-attachments/assets/f9d924b0-d232-4f1c-a129-d75b78e2cea1" />
+
 
 <img width="391" alt="Screenshot 2025-01-09 at 0 23 33" src="https://github.com/user-attachments/assets/bba79a32-2800-477d-a233-6f788a07b3d5" />
 
